@@ -3,13 +3,13 @@ import './App.css'
 import { PasswordField } from './PasswordField'
 
 function App() {
-	const [password, setPassword] = useState<string>('')
+	const [password, setPassword] = useState<string>('sujal')
 	const [showPassword, setShowPassword] = useState<boolean>(false)
 
 	const handlePasswordChange = (value: string) => {
 		setPassword(value)
 	}
-
+  console.log(password);
 	const handleToggleShow = () => {
 		setShowPassword((prev) => !prev)
 	}
