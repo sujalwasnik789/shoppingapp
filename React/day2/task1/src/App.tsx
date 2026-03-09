@@ -7,24 +7,26 @@ function App() {
   const[name,setname]=useState<string>("");
 
 return(
-  <div>
-    <h1>Greeting Card</h1>
+  <main className="app-container">
+    <div className="card">
+    <h1 className="title">Greeting Card</h1>
     <input
+    className="name-input"
     type="text"
     value={name}
     onChange={(e)=>setname(e.target.value)}
-    placeholder='enter your name'
-
+    placeholder='Enter your name'
     />
     <GreetingCard name={name}/>
-  </div>
+    </div>
+  </main>
 );
 }
 function GreetingCard({name}:GreetingProp){
   const displayName=name.trim()||"stranger";
   return(
-    <div>
-      <h2>Hello,{displayName}!</h2>
+    <div className="greeting-box">
+      <h2>Hello, {displayName}!</h2>
     </div>
   );
 
